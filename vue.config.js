@@ -1,7 +1,10 @@
 var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? '/nippon-color/' : '/',
+  // WARN 此处的处理，是为了适应服务器的子路径
+  // baseUrl: process.env.NODE_ENV === 'production' ? '/nippon-color/' : '/',
+  // 修改为，相对路径（之前）
+  baseUrl: process.env.NODE_ENV === 'production' ? './' : './',
   pwa: {
     themeColor: '#ffffff',
     msTileColor: '#ffffff',
